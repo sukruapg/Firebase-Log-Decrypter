@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Log Decrypter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Firebase Log Decrypter</h1>
+    
+    <div class="file-inputs">
+        <div class="input-group">
+            <label>Log File:</label>
+            <input type="file" accept=".log" id="logFile">
+        </div>
+        <div class="input-group">
+            <label>Private Key:</label>
+            <input type="file" accept=".pem" id="privateKey">
+        </div>
+        <button onclick="processFiles()">Process Logs</button>
+    </div>
+
+    <div id="logsContainer"></div>
+
+    <script src="https://unpkg.com/node-forge@1.3.1/dist/forge.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
